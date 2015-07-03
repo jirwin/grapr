@@ -1,0 +1,18 @@
+{
+  "name": "grapr",
+  "version": "0.0.0",
+  "description": "A tool for importing dashboards into grafana so they can easily be stored next to your code.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/bin/tape test/test-*.js"
+  },
+  "keywords": [
+    "grafana",
+    "pr",
+    "metrics",
+    "graphs",
+    "monitoring"
+  ],
+  "author": "Justin Gallardo <justin.gallardo@gmail.com>",
+  "license": "MIT"
+}
