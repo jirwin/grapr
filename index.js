@@ -14,7 +14,6 @@ if (!argv.dashboard) {
 
 var es = new elasticsearch.Client({
   host: esHost + ':' + esPort,
-  log: 'trace'
 });
 
 try {
