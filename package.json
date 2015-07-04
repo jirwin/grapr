@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo 'No tests yet.'"
   },
-  "repository": "jirwin/grapr",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jirwin/grapr.git"
+  },
   "keywords": [
     "grafana",
     "pr",
@@ -14,6 +17,7 @@
     "graphs",
     "monitoring"
   ],
+  "homepage": "https://github.com/jirwin/grapr",
   "author": "Justin Gallardo <justin.gallardo@gmail.com>",
   "license": "MIT",
   "dependencies": {
