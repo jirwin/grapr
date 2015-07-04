@@ -24,14 +24,12 @@ try {
   process.exit(1);
 }
 
-es.update({
+es.create({
   index: 'grafana-dash',
   type: 'dashboard',
   id: dashboard.name,
   body: {
-    doc: {
       dashboard: jsesc(minify(JSON.stringify(dashboard.dashboard)), {'quotes': 'double'})
-    }
   }
 }, function(err, res) {
   console.dir(err);
