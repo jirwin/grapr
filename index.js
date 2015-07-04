@@ -28,7 +28,11 @@ es.index({
   type: 'dashboard',
   id: dashboard.name,
   body: {
-      dashboard: jsesc(minify(JSON.stringify(dashboard.dashboard)), {'quotes': 'double'})
+      dashboard: jsesc(minify(JSON.stringify(dashboard.dashboard)), {'quotes': 'double'}),
+      group: 'guest',
+      tags: [],
+      title: dashboard.dashboard.title,
+      user: 'guest'
   }
 }, function(err, res) {
   if (err) {
