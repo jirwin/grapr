@@ -4,7 +4,7 @@
   "description": "A tool for importing dashboards into grafana so they can easily be stored next to your code.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/bin/tape test/test-*.js"
+    "test": "echo 'No tests yet.'"
   },
   "keywords": [
     "grafana",
