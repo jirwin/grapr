@@ -28,8 +28,10 @@ es.update({
   index: 'grafana-dash',
   type: 'dashboard',
   id: dashboard.name,
-  doc: {
-    dashboard: jsesc(minify(JSON.stringify(dashboard.dashboard)), {'quotes': 'double'})
+  body: {
+    doc: {
+      dashboard: jsesc(minify(JSON.stringify(dashboard.dashboard)), {'quotes': 'double'})
+    }
   }
 }, function(err, res) {
   console.dir(err);
