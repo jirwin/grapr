@@ -15,7 +15,7 @@ The dashboards this processes are just a little more than what is exported direc
 ```json
 {
   "name": "this-is-a-unique-name-for-the-dashboard",
-  "dashboard: {
+  "dashboard": {
     "id": null,
     "title": "New Dashboard",
     "originalTitle": "New Dashboard",
