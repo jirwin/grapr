@@ -1,12 +1,12 @@
 {
   "name": "grapr",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A tool for importing dashboards into grafana so they can easily be stored next to your code.",
   "main": "index.js",
   "scripts": {
     "test": "echo 'No tests yet.'"
   },
-  "repository" : "jirwin/grapr",
+  "repository": "jirwin/grapr",
   "keywords": [
     "grafana",
     "pr",
