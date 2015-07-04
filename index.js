@@ -28,7 +28,7 @@ es.index({
   type: 'dashboard',
   id: dashboard.name,
   body: {
-      dashboard: jsesc(minify(JSON.stringify(dashboard.dashboard)), {'quotes': 'double'}),
+      dashboard: minify(JSON.stringify(dashboard.dashboard)),
       group: 'guest',
       tags: [],
       title: dashboard.dashboard.title,
