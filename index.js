@@ -17,6 +17,21 @@ var es = new elasticsearch.Client({
   log: 'trace'
 });
 
-var dashboard = minify(fs.readFileSync(argv.dashboard).toString());
+try {
+  var dashboard = JSON.parse(fs.readFileSync(argv.dashboard).toString());
+} catch(e) {
+  console.log('File specified with --dashboard is not valid JSON');
+  process.exit(1);
+}
 
-console.log(jsesc(dashboard, {'quotes': 'double'}));
+es.update({
+  index: 'grafana-dash',
+  type: 'dashboard',
+  id: dashboard.name,
+  doc: {
+    dashboard: jsesc(minify(JSON.stringify(dashboard.dashboard)), {'quotes': 'double'})
+  }
+}, function(err, res) {
+  console.dir(err);
+  console.dir(res);
+});
