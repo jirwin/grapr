@@ -1,7 +1,6 @@
 var fs = require('fs');
 var minify = require('node-json-minify');
 var argv = require('minimist')(process.argv.slice(2));
-var jsesc = require('jsesc');
 var elasticsearch = require('elasticsearch');
 
 var esHost = argv.esHost || 'localhost';
@@ -13,7 +12,7 @@ if (!argv.dashboard) {
 }
 
 var es = new elasticsearch.Client({
-  host: esHost + ':' + esPort,
+  host: esHost + ':' + esPort
 });
 
 try {
