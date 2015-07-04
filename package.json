@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo 'No tests yet.'"
   },
+  "repository" : "jirwin/grapr",
   "keywords": [
     "grafana",
     "pr",
