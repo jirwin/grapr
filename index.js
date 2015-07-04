@@ -24,7 +24,7 @@ try {
   process.exit(1);
 }
 
-es.create({
+es.index({
   index: 'grafana-dash',
   type: 'dashboard',
   id: dashboard.name,
@@ -32,6 +32,11 @@ es.create({
       dashboard: jsesc(minify(JSON.stringify(dashboard.dashboard)), {'quotes': 'double'})
   }
 }, function(err, res) {
-  console.dir(err);
-  console.dir(res);
+  if (err) {
+    console.error('Error while creating dashboard.', {err: err});
+    process.exit(1);
+  }
+
+  console.log('Dashboard created successfully');
+  process.exit(0);
 });
