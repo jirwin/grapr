@@ -1,6 +1,6 @@
 {
   "name": "grapr",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A tool for importing dashboards into grafana so they can easily be stored next to your code.",
   "main": "index.js",
   "scripts": {
